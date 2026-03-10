@@ -273,24 +273,7 @@
         <button class="tool-btn" onclick="window.print()">
             <i class="fa-solid fa-file-pdf"></i> 存成 PDF (傳送圖卡)
         </button>
-        <button class="tool-btn" onclick="downloadHTML()">
-            <i class="fa-solid fa-download"></i> 下載 HTML
-        </button>
     </div>
 
-    <script>
-        function downloadHTML() {
-            const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], {type: 'text/html;charset=utf-8'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = '2026新竹區創價友誼日_宣傳卡.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-    </script>
 </body>
 </html>
