@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+    <title>2026新竹區創價友誼日 宣傳卡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 1. THE SETUP */
+        * {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        body {
+            background-color: #FDF6E3;
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            min-height: 100vh;
+            padding: 40px 0;
+            place-items: center;
+        }
+
+        .slide-container {
+            align-items: center;
+            background-color: #fff;
+            border-radius: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Noto Sans TC', sans-serif;
+            height: 720px;
+            justify-content: center;
+            overflow: hidden;
+            padding: 50px;
+            position: relative;
+            width: 1280px;
+        }
+
+        .slide-container>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 2. CONSISTENT TYPOGRAPHY */
+        .slide-container h1,
+        .slide-container h2,
+        .slide-container h3 {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            margin: 0;
+        }
+
+        .slide-container .slide-title {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-align: left;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+
+        .slide-container h3 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .slide-container p,
+        .slide-container li {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 24px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .slide-container .content-area {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* 3. LAYOUT DEFINITIONS */
+        .two-column {
+            align-items: stretch;
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .two-column.tiled>div {
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .bullet-list {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .bullet-list ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bullet-list li {
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-left: 60px;
+            position: relative;
+        }
+
+        .bullet-list i {
+            font-size: 36px;
+            left: 0;
+            margin-top: 2px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+        }
+
+        /* Export Tools */
+        @media print {
+            .no-print { display: none !important; }
+            body { padding: 0; background-color: transparent; }
+            .slide-container { box-shadow: none; break-after: page; }
+        }
+        .floating-tools {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+            display: flex;
+            gap: 15px;
+        }
+        .tool-btn {
+            background: #E65100;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(230,81,0,0.4);
+            font-family: 'Noto Sans TC', sans-serif;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tool-btn:hover {
+            transform: translateY(-3px);
+            background: #BF360C;
+            box-shadow: 0 6px 20px rgba(230,81,0,0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Event Info (Centered Message Card - Originally Page 3) -->
+    <div class="slide-container" id="slide1" style="background-color: #FFF3E0;">
+        <div class="content-area">
+            <div style="background-color: #FFE082; padding: 40px 60px; border-radius: 40px; text-align: center; box-shadow: 0 15px 35px rgba(230,81,0,0.15); width: 90%; max-width: 1000px; position: relative; border: 8px solid #FFCA28; margin-top: 30px;">
+                
+                <div style="position: absolute; top: -35px; left: 50%; transform: translateX(-50%); background: #E65100; color: white; padding: 10px 40px; border-radius: 50px; font-size: 32px; font-weight: bold; box-shadow: 0 8px 20px rgba(230,81,0,0.3); font-family: 'Zen Maru Gothic', sans-serif; white-space: nowrap;">
+                    ⏰ 友誼日時間與地點
+                </div>
+                
+                <h2 style="color: #D84315; font-size: 56px; margin-top: 25px; margin-bottom: 30px; font-weight: 900; letter-spacing: 1px; white-space: nowrap;">
+                    ✨ 新竹區創價友誼日 ✨
+                </h2>
+                
+                <p style="font-size: 38px; color: #BF360C; line-height: 1.8; font-weight: 700; margin-bottom: 30px;">
+                    <i class="fa-regular fa-calendar-check" style="color: #E65100; margin-right: 10px;"></i> 2026.04.11 (六)<br>
+                    <i class="fa-regular fa-clock" style="color: #E65100; margin-right: 10px;"></i> 13:30 進場 / 14:00 開始<br>
+                    <i class="fa-solid fa-location-dot" style="color: #E65100; margin-right: 10px;"></i> 新竹會館 5樓
+                </p>
+                
+                <div style="background-color: #FFF8E1; padding: 20px 30px; border-radius: 20px; display: inline-block;">
+                    <p style="font-size: 32px; color: #E65100; font-weight: 900; margin: 0; letter-spacing: 1px;">
+                        以友誼為鑰匙，開啟廣宣流布的大門！✨
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Two_Column_Tiled_Text (邀約規劃 - Originally Page 5) -->
+    <div class="slide-container" id="slide2" style="background-color: #F1F8E9;">
+        <h2 class="slide-title" style="color: #33691E;">🎯 邀約規劃：跨出友誼的第一步！</h2>
+        <div class="content-area">
+            <div class="two-column tiled">
+                <div style="background-color: #DCEDC8; border: none; border-radius: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                    <h3 style="color: #2E7D32; font-size:42px; margin-bottom: 25px;">青年部＆高中生 🚀</h3>
+                    <p style="font-size: 24px; color: #33691E; text-align:left; padding:0 10px; line-height: 1.6;">
+                        以支部為單位，共同安排討論邀約目標。<br>
+                        👉 <strong>邀約回報方式同2025、2024友誼日做法。</strong><br><br>
+                        <a href="https://docs.google.com/spreadsheets/d/1aNlgpRS10gLIKmZDWd4eqSZa2zMvat9XERJHPavzVfs/edit?usp=drive_link" target="_blank" style="display:inline-block; margin-bottom: 15px; color: #1565C0; text-decoration: none; font-weight: bold; background: #FFF; padding: 10px 20px; border-radius: 15px;">🔗 青年部邀約回報表單點此</a><br>
+                        📝 先列名單再邀約，重點尋找「新朋友」參加！
+                    </p>
+                </div>
+                <div style="background-color: #FFCCBC; border: none; border-radius: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                    <h3 style="color: #D84315; font-size:42px; margin-bottom: 25px;">壯婦部 🌻</h3>
+                    <p style="font-size: 24px; color: #BF360C; text-align:left; padding:0 10px; line-height: 1.6;">
+                        請將名單回報給青年部幹部協助確認邀約，或是填寫專屬報名問卷。<br><br>
+                        <a href="https://forms.gle/vYGebfq8MwxNQzfd6" target="_blank" style="display:inline-block; margin-bottom: 15px; color: #C62828; text-decoration: none; font-weight: bold; background: #FFF; padding: 10px 20px; border-radius: 15px;">🔗 壯婦部邀約問卷點此</a><br><br>
+                        💡 <strong>陪同規定：</strong> 壯婦部可陪同參加！但不算入報名名單 (無名牌、分組、點心)。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Styled_Bullet_Points (傳達事項 - Originally Page 6) -->
+    <div class="slide-container" id="slide3" style="background-color: #FFF8E1;">
+        <h2 class="slide-title" style="color: #FF8F00;">📢 傳達事項：邀約流程重點說明</h2>
+        <div class="content-area">
+            <div class="bullet-list">
+                <ul>
+                    <li style="font-size:28px; margin-bottom: 40px; color:#E65100;"><i class="fa-solid fa-circle-check" style="color: #FFB300;"></i> <strong>分流回報：</strong>青年部與壯婦部的邀約回報是分開的，請各自填寫專屬的表單與報名問卷。</li>
+                    <li style="font-size:28px; margin-bottom: 40px; color:#E65100;"><i class="fa-solid fa-star" style="color: #FFB300;"></i> <strong>新朋友優先：</strong>請大家重點尋找可以鼓勵的<strong>「新朋友」</strong>參加（例如年初設定的新朋友目標）。</li>
+                    <li style="font-size:28px; margin-bottom: 40px; color:#E65100;"><i class="fa-solid fa-bullhorn" style="color: #FFB300;"></i> <strong>每週戰報：</strong>每周將公告邀約戰報，全部邀約名單透明化，四部皆可隨時確認是否報名成功。</li>
+                    <li style="font-size:28px; margin-bottom: 20px; color:#E65100;"><i class="fa-solid fa-earth-asia" style="color: #FFB300;"></i> <strong>跨區參加：</strong>非常歡迎別區會友跨區參加新竹區的友誼日，直接填寫報名問卷即可！</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Tools -->
+    <div class="floating-tools no-print">
+        <button class="tool-btn" onclick="window.print()">
+            <i class="fa-solid fa-file-pdf"></i> 存成 PDF (傳送圖卡)
+        </button>
+        <button class="tool-btn" onclick="downloadHTML()">
+            <i class="fa-solid fa-download"></i> 下載 HTML
+        </button>
+    </div>
+
+    <script>
+        function downloadHTML() {
+            const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], {type: 'text/html;charset=utf-8'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '2026新竹區創價友誼日_宣傳卡.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
