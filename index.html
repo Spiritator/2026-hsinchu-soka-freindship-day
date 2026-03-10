@@ -23,13 +23,13 @@
 
         body {
             background-color: #FDF6E3;
-            display: grid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 40px;
-            grid-template-columns: 1fr;
             margin: 0;
             min-height: 100vh;
-            padding: 40px 0;
-            place-items: center;
+            padding: 40px 20px;
         }
 
         .slide-container {
@@ -40,12 +40,13 @@
             display: flex;
             flex-direction: column;
             font-family: 'Noto Sans TC', sans-serif;
-            height: 720px;
+            width: 100%;
+            max-width: 1280px;
+            aspect-ratio: 16 / 9;
             justify-content: center;
             overflow: hidden;
             padding: 50px;
             position: relative;
-            width: 1280px;
         }
 
         .slide-container>* {
@@ -62,7 +63,7 @@
         }
 
         .slide-container .slide-title {
-            font-size: 52px;
+            font-size: clamp(32px, 5vw, 52px);
             font-weight: 900;
             margin-bottom: 30px;
             text-align: left;
@@ -71,7 +72,7 @@
         }
 
         .slide-container h3 {
-            font-size: 36px;
+            font-size: clamp(26px, 4vw, 36px);
             font-weight: 700;
             margin-bottom: 15px;
             letter-spacing: 1px;
@@ -80,7 +81,7 @@
         .slide-container p,
         .slide-container li {
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 24px;
+            font-size: clamp(18px, 2.5vw, 24px);
             line-height: 1.6;
             font-weight: 500;
         }
@@ -126,12 +127,12 @@
         .bullet-list li {
             gap: 15px;
             margin-bottom: 25px;
-            padding-left: 60px;
+            padding-left: clamp(45px, 6vw, 60px);
             position: relative;
         }
 
         .bullet-list i {
-            font-size: 36px;
+            font-size: clamp(24px, 3.5vw, 36px);
             left: 0;
             margin-top: 2px;
             position: absolute;
@@ -139,11 +140,29 @@
             top: 0;
         }
 
+        /* Responsive Adjustments for Mobile */
+        @media (max-width: 900px) {
+            .slide-container {
+                aspect-ratio: auto;
+                min-height: 60vh;
+                padding: 30px 20px;
+                border-radius: 25px;
+            }
+            .two-column {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .two-column.tiled>div {
+                padding: 25px;
+                border-radius: 25px !important;
+            }
+        }
+
         /* Export Tools */
         @media print {
             .no-print { display: none !important; }
-            body { padding: 0; background-color: transparent; }
-            .slide-container { box-shadow: none; break-after: page; }
+            body { padding: 0; background-color: transparent; gap: 0; display: block; }
+            .slide-container { box-shadow: none; break-after: page; aspect-ratio: 16/9; max-width: none; border-radius: 0; height: 100vh; }
         }
         .floating-tools {
             position: fixed;
@@ -178,27 +197,27 @@
 </head>
 <body>
 
-    <!-- Slide 1: Event Info (Centered Message Card - Originally Page 3) -->
+    <!-- Slide 1: Event Info (Centered Message Card) -->
     <div class="slide-container" id="slide1" style="background-color: #FFF3E0;">
         <div class="content-area">
-            <div style="background-color: #FFE082; padding: 40px 60px; border-radius: 40px; text-align: center; box-shadow: 0 15px 35px rgba(230,81,0,0.15); width: 90%; max-width: 1000px; position: relative; border: 8px solid #FFCA28; margin-top: 30px;">
+            <div style="background-color: #FFE082; padding: clamp(20px, 4vw, 40px) clamp(20px, 5vw, 60px); border-radius: clamp(20px, 4vw, 40px); text-align: center; box-shadow: 0 15px 35px rgba(230,81,0,0.15); width: 90%; max-width: 1000px; position: relative; border: 8px solid #FFCA28; margin-top: clamp(20px, 4vw, 30px);">
                 
-                <div style="position: absolute; top: -35px; left: 50%; transform: translateX(-50%); background: #E65100; color: white; padding: 10px 40px; border-radius: 50px; font-size: 32px; font-weight: bold; box-shadow: 0 8px 20px rgba(230,81,0,0.3); font-family: 'Zen Maru Gothic', sans-serif; white-space: nowrap;">
+                <div style="position: absolute; top: clamp(-20px, -4vw, -35px); left: 50%; transform: translateX(-50%); background: #E65100; color: white; padding: clamp(8px, 2vw, 10px) clamp(20px, 4vw, 40px); border-radius: 50px; font-size: clamp(20px, 4vw, 32px); font-weight: bold; box-shadow: 0 8px 20px rgba(230,81,0,0.3); font-family: 'Zen Maru Gothic', sans-serif; white-space: nowrap;">
                     ⏰ 友誼日時間與地點
                 </div>
                 
-                <h2 style="color: #D84315; font-size: 56px; margin-top: 25px; margin-bottom: 30px; font-weight: 900; letter-spacing: 1px; white-space: nowrap;">
+                <h2 style="color: #D84315; font-size: clamp(32px, 6vw, 56px); margin-top: clamp(15px, 3vw, 25px); margin-bottom: clamp(20px, 4vw, 30px); font-weight: 900; letter-spacing: 1px;">
                     ✨ 新竹區創價友誼日 ✨
                 </h2>
                 
-                <p style="font-size: 38px; color: #BF360C; line-height: 1.8; font-weight: 700; margin-bottom: 30px;">
+                <p style="font-size: clamp(20px, 4vw, 38px); color: #BF360C; line-height: 1.8; font-weight: 700; margin-bottom: clamp(20px, 4vw, 30px);">
                     <i class="fa-regular fa-calendar-check" style="color: #E65100; margin-right: 10px;"></i> 2026.04.11 (六)<br>
                     <i class="fa-regular fa-clock" style="color: #E65100; margin-right: 10px;"></i> 13:30 進場 / 14:00 開始<br>
                     <i class="fa-solid fa-location-dot" style="color: #E65100; margin-right: 10px;"></i> 新竹會館 5樓
                 </p>
                 
-                <div style="background-color: #FFF8E1; padding: 20px 30px; border-radius: 20px; display: inline-block;">
-                    <p style="font-size: 32px; color: #E65100; font-weight: 900; margin: 0; letter-spacing: 1px;">
+                <div style="background-color: #FFF8E1; padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 30px); border-radius: 20px; display: inline-block;">
+                    <p style="font-size: clamp(18px, 3vw, 32px); color: #E65100; font-weight: 900; margin: 0; letter-spacing: 1px;">
                         以友誼為鑰匙，開啟廣宣流布的大門！✨
                     </p>
                 </div>
@@ -207,23 +226,24 @@
         </div>
     </div>
 
-    <!-- Slide 2: Two_Column_Tiled_Text (邀約規劃 - Originally Page 5) -->
+    <!-- Slide 2: Two_Column_Tiled_Text (邀約規劃) -->
     <div class="slide-container" id="slide2" style="background-color: #F1F8E9;">
         <h2 class="slide-title" style="color: #33691E;">🎯 邀約規劃：跨出友誼的第一步！</h2>
         <div class="content-area">
             <div class="two-column tiled">
                 <div style="background-color: #DCEDC8; border: none; border-radius: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
-                    <h3 style="color: #2E7D32; font-size:42px; margin-bottom: 25px;">青年部＆高中生 🚀</h3>
-                    <p style="font-size: 24px; color: #33691E; text-align:left; padding:0 10px; line-height: 1.6;">
+                    <h3 style="color: #2E7D32; font-size:clamp(28px, 4vw, 42px); margin-bottom: 25px;">青年部＆高中生 🚀</h3>
+                    <p style="font-size: clamp(18px, 2.5vw, 24px); color: #33691E; text-align:left; padding:0 10px; line-height: 1.6;">
                         以支部為單位，共同安排討論邀約目標。<br>
                         👉 <strong>邀約回報方式同2025、2024友誼日做法。</strong><br><br>
-                        <a href="https://docs.google.com/spreadsheets/d/1aNlgpRS10gLIKmZDWd4eqSZa2zMvat9XERJHPavzVfs/edit?usp=drive_link" target="_blank" style="display:inline-block; margin-bottom: 15px; color: #1565C0; text-decoration: none; font-weight: bold; background: #FFF; padding: 10px 20px; border-radius: 15px;">🔗 青年部邀約回報表單點此</a><br>
+                        <!-- 移除原本的連結，替換為純文字說明 -->
+                        <span style="display:inline-block; margin-bottom: 15px; color: #1565C0; font-weight: bold; background: #FFF; padding: 10px 20px; border-radius: 15px;">🔗 青年部邀約回報表 以青年部管道傳達</span><br>
                         📝 先列名單再邀約，重點尋找「新朋友」參加！
                     </p>
                 </div>
                 <div style="background-color: #FFCCBC; border: none; border-radius: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
-                    <h3 style="color: #D84315; font-size:42px; margin-bottom: 25px;">壯婦部 🌻</h3>
-                    <p style="font-size: 24px; color: #BF360C; text-align:left; padding:0 10px; line-height: 1.6;">
+                    <h3 style="color: #D84315; font-size:clamp(28px, 4vw, 42px); margin-bottom: 25px;">壯婦部 🌻</h3>
+                    <p style="font-size: clamp(18px, 2.5vw, 24px); color: #BF360C; text-align:left; padding:0 10px; line-height: 1.6;">
                         請將名單回報給青年部幹部協助確認邀約，或是填寫專屬報名問卷。<br><br>
                         <a href="https://forms.gle/vYGebfq8MwxNQzfd6" target="_blank" style="display:inline-block; margin-bottom: 15px; color: #C62828; text-decoration: none; font-weight: bold; background: #FFF; padding: 10px 20px; border-radius: 15px;">🔗 壯婦部邀約問卷點此</a><br><br>
                         💡 <strong>陪同規定：</strong> 壯婦部可陪同參加！但不算入報名名單 (無名牌、分組、點心)。
@@ -233,16 +253,16 @@
         </div>
     </div>
 
-    <!-- Slide 3: Styled_Bullet_Points (傳達事項 - Originally Page 6) -->
+    <!-- Slide 3: Styled_Bullet_Points (傳達事項) -->
     <div class="slide-container" id="slide3" style="background-color: #FFF8E1;">
         <h2 class="slide-title" style="color: #FF8F00;">📢 傳達事項：邀約流程重點說明</h2>
         <div class="content-area">
             <div class="bullet-list">
                 <ul>
-                    <li style="font-size:28px; margin-bottom: 40px; color:#E65100;"><i class="fa-solid fa-circle-check" style="color: #FFB300;"></i> <strong>分流回報：</strong>青年部與壯婦部的邀約回報是分開的，請各自填寫專屬的表單與報名問卷。</li>
-                    <li style="font-size:28px; margin-bottom: 40px; color:#E65100;"><i class="fa-solid fa-star" style="color: #FFB300;"></i> <strong>新朋友優先：</strong>請大家重點尋找可以鼓勵的<strong>「新朋友」</strong>參加（例如年初設定的新朋友目標）。</li>
-                    <li style="font-size:28px; margin-bottom: 40px; color:#E65100;"><i class="fa-solid fa-bullhorn" style="color: #FFB300;"></i> <strong>每週戰報：</strong>每周將公告邀約戰報，全部邀約名單透明化，四部皆可隨時確認是否報名成功。</li>
-                    <li style="font-size:28px; margin-bottom: 20px; color:#E65100;"><i class="fa-solid fa-earth-asia" style="color: #FFB300;"></i> <strong>跨區參加：</strong>非常歡迎別區會友跨區參加新竹區的友誼日，直接填寫報名問卷即可！</li>
+                    <li style="font-size:clamp(18px, 2.5vw, 28px); margin-bottom: clamp(20px, 3vw, 40px); color:#E65100;"><i class="fa-solid fa-circle-check" style="color: #FFB300;"></i> <strong>分流回報：</strong>青年部與壯婦部的邀約回報是分開的，請各自填寫專屬的表單與報名問卷。</li>
+                    <li style="font-size:clamp(18px, 2.5vw, 28px); margin-bottom: clamp(20px, 3vw, 40px); color:#E65100;"><i class="fa-solid fa-star" style="color: #FFB300;"></i> <strong>新朋友優先：</strong>請大家重點尋找可以鼓勵的<strong>「新朋友」</strong>參加（例如年初設定的新朋友目標）。</li>
+                    <li style="font-size:clamp(18px, 2.5vw, 28px); margin-bottom: clamp(20px, 3vw, 40px); color:#E65100;"><i class="fa-solid fa-bullhorn" style="color: #FFB300;"></i> <strong>每週戰報：</strong>每周將公告邀約戰報，全部邀約名單透明化，四部皆可隨時確認是否報名成功。</li>
+                    <li style="font-size:clamp(18px, 2.5vw, 28px); margin-bottom: 20px; color:#E65100;"><i class="fa-solid fa-earth-asia" style="color: #FFB300;"></i> <strong>跨區參加：</strong>非常歡迎別區會友跨區參加新竹區的友誼日，直接填寫報名問卷即可！</li>
                 </ul>
             </div>
         </div>
